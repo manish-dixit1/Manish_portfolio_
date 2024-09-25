@@ -1,14 +1,14 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-import { styles } from "../styles";
+
 import { SectionWrapper } from "../hoc";
-import { fadeIn, textVariant } from "../utils/motion";
-import { testimonials } from "../constants";
+import { fadeIn } from "../utils/motion";
+
 
 const FeedbackCard = ({
   index,
-  testimonial,
+  
   name,
   designation,
   company,
@@ -21,7 +21,7 @@ const FeedbackCard = ({
     <p className="text-[48px] font-black text-white">"</p>
 
     <div className="mt-1">
-      <p className="text-[18px] tracking-wider text-white">{testimonial}</p>
+      
 
       <div className="mt-7 flex items-center justify-between gap-1">
         <div className="flex flex-1 flex-col">
@@ -43,26 +43,26 @@ const FeedbackCard = ({
   </motion.div>
 );
 
-const Feedbacks = () => {
-  return (
-    <div className={`mt-12 rounded-[20px] bg-black-100`}>
-      <div
-        className={`rounded-2xl bg-tertiary ${styles.padding} min-h-[300px]`}
-      >
-        <motion.div variants={textVariant()}>
-          <p className={styles.sectionSubText}>What others say</p>
-          <h2 className={styles.sectionHeadText}>Testimonials.</h2>
-        </motion.div>
-      </div>
-      <div
-        className={`-mt-20 pb-14 ${styles.paddingX} flex-center-center flex-wrap gap-7`}
-      >
-        {testimonials.map((testimonial, index) => (
-          <FeedbackCard key={testimonial.name} index={index} {...testimonial} />
-        ))}
-      </div>
-    </div>
-  );
-};
+// const Feedbacks = () => {
+//   return (
+//     <div className={`mt-12 rounded-[20px] bg-black-100`}>
+//       <div
+//         className={`rounded-2xl bg-tertiary ${styles.padding} min-h-[300px]`}
+//       >
+//         <motion.div variants={textVariant()}>
+//           <p className={styles.sectionSubText}>What others say</p>
+//           <h2 className={styles.sectionHeadText}>Testimonials.</h2>
+//         </motion.div>
+//       </div>
+//       <div
+//         className={`-mt-20 pb-14 ${styles.paddingX} flex-center-center flex-wrap gap-7`}
+//       >
+//         {/* {testimonials.map((testimonial, index) => (
+//           <FeedbackCard key={testimonial.name} index={index} {...testimonial} />
+//         ))} */}
+//       </div>
+//     </div>
+//   );
+// };
 
-export default SectionWrapper(Feedbacks, "feedbacks");
+export default SectionWrapper;
